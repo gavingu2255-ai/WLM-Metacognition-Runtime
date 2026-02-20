@@ -1,0 +1,44 @@
+# pyproject.toml
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "wlm-metacognition-runtime"
+version = "0.5.0"
+description = "Runtime skeleton for WLM structured metacognition."
+authors = [{ name = "Wujie Gu" }]
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+
+[project.urls]
+Homepage = "https://github.com/gavingu2255-ai/WLM-Metacognition-Runtime"
+
+
+# setup.cfg
+[metadata]
+name = wlm-metacognition-runtime
+version = 0.5.0
+description = Runtime skeleton for WLM structured metacognition.
+author = Wujie Gu
+license = MIT
+license_files = LICENSE
+long_description = file: README.md
+long_description_content_type = text/markdown
+
+[options]
+packages = find:
+package_dir =
+    = src
+python_requires = >=3.9
+
+[options.packages.find]
+where = src
+
+
+# MANIFEST.in
+include LICENSE
+include README.md
+recursive-include docs *.md
+recursive-include examples *.py
